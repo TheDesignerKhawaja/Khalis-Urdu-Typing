@@ -6,24 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اردو میں تیز ٹائپنگ کا امتحان</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Scheherazade+New&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Scheherazade New', serif;
-        }
-        
-        textarea {
-            font-family: 'Noto Nastaliq Urdu', serif;
-        }
-    </style>
 </head>
 
 <body>
 
     <header>
-        <div class="heading">اردو میں تیز ٹائپنگ</div>
+        <div class="heading">
+            <h1>اردو میں تیز ٹائپنگ</h1>
+        </div>
         <nav>
             <a href="https://www.instagram.com/thedesignerkhawaja">رابطہ کریں</a>
         </nav>
@@ -33,28 +27,50 @@
         <div class="container">
             <div class="header">
                 <div class="wpm">
-                    <div class="header_text">الفاظ فی منٹ</div>
-                    <div class="curr_wpm">100</div>
+                    <div class="title_text">
+                        <h2>الفاظ فی منٹ</h2>
+                    </div>
+                    <div class="curr_wpm">
+                        <h3>100</h3>
+                    </div>
                 </div>
                 <div class="cpm">
-                    <div class="header_text">حروف فی منٹ</div>
-                    <div class="curr_cpm">100</div>
+                    <div class="title_text">
+                        <h2>حروف فی منٹ</h2>
+                    </div>
+                    <div class="curr_cpm">
+                        <h3>100</h3>
+                    </div>
                 </div>
                 <div class="errors">
-                    <div class="header_text">غلطیاں</div>
-                    <div class="curr_errors">0</div>
+                    <div class="title_text">
+                        <h2>غلطیاں</h2>
+                    </div>
+                    <div class="curr_errors">
+                        <h3>0</h3>
+                    </div>
                 </div>
                 <div class="timer">
-                    <div class="header_text">وقت</div>
-                    <div class="curr_time">60s</div>
+                    <div class="title_text">
+                        <h2>وقت</h2>
+                    </div>
+                    <div class="curr_time">
+                        <h3>60s</h3>
+                    </div>
                 </div>
                 <div class="accuracy">
-                    <div class="header_text">% درستگی</div>
-                    <div class="curr_accuracy">100</div>
+                    <div class="title_text">
+                        <h2>% درستگی</h2>
+                    </div>
+                    <div class="curr_accuracy">
+                        <h3>100</h3>
+                    </div>
                 </div>
             </div>
 
-            <div class="test_para">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</div>
+            <div class="test_para">
+                <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
+            </div>
             <textarea class="input_area" oninput="processCurrentText()" onfocus="startGame()"></textarea>
             <button class="restart_btn" onclick="resetValues()">Restart</button>
         </div>

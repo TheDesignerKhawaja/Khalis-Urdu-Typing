@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Scheherazade New', serif;
+    font-size: 10px;
+    --pColor: #651fff;
+    --pLight: #a255ff;
+    --pDark: #0100ca;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2,
+h3 {
+    font-size: 2rem;
+}
+
+p,
+textarea {
+    font-size: 1.8rem;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
