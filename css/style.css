@@ -257,3 +257,20 @@ footer span {
     margin-left: 8px;
     font-size: 1.9rem;
 }
+
+@media screen and (max-width:600px) {
+    body {
+        position: relative;
+        height: 100vh;
+    }
+    main,
+    aside {
+        display: none;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+}
