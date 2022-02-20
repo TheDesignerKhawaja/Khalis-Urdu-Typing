@@ -89,7 +89,7 @@ textarea {
 .tooltip::before {
     content: "";
     position: absolute;
-    top: -30%;
+    bottom: 100%;
     left: 50%;
     transform: translate(-50%);
     border-right: 8px solid transparent;
