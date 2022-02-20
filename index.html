@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اردو میں تیز ٹائپنگ کا امتحان</title>
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,68 +17,66 @@
 
     <header>
         <div class="heading">
-            <h1>اردو میں تیز ٹائپنگ</h1>
+            <h1><a href="index.html">اردو میں تیز ٹائپنگ</a></h1>
         </div>
         <nav>
-            <a href="https://www.instagram.com/thedesignerkhawaja">رابطہ کریں</a>
+            <a href="https://www.instagram.com/thedesignerkhawaja" class="has-tooltip"><i class="fas fa-paper-plane" aria-describedby="tool-tip"></i> <span class="tooltip" id="tool-tip">رابطہ کریں</span></a>
         </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="header">
-                <div class="wpm">
-                    <div class="title_text">
-                        <h2>الفاظ فی منٹ</h2>
-                    </div>
-                    <div class="curr_wpm">
-                        <h3>100</h3>
-                    </div>
-                </div>
-                <div class="cpm">
-                    <div class="title_text">
-                        <h2>حروف فی منٹ</h2>
-                    </div>
-                    <div class="curr_cpm">
-                        <h3>100</h3>
-                    </div>
-                </div>
-                <div class="errors">
-                    <div class="title_text">
-                        <h2>غلطیاں</h2>
-                    </div>
-                    <div class="curr_errors">
-                        <h3>0</h3>
-                    </div>
-                </div>
-                <div class="timer">
-                    <div class="title_text">
-                        <h2>وقت</h2>
-                    </div>
-                    <div class="curr_time">
-                        <h3>60s</h3>
-                    </div>
-                </div>
-                <div class="accuracy">
-                    <div class="title_text">
-                        <h2>% درستگی</h2>
-                    </div>
-                    <div class="curr_accuracy">
-                        <h3>100</h3>
-                    </div>
-                </div>
+    <aside>
+        <div class="wrapper timer">
+            <div class="curr_time">
+                <h2>60s</h2>
             </div>
-
-            <div class="test_para">
-                <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
+            <div class="title_text">
+                <h3>وقت</h3>
             </div>
-            <textarea class="input_area" oninput="processCurrentText()" onfocus="startGame()"></textarea>
-            <button class="restart_btn" onclick="resetValues()">Restart</button>
         </div>
+        <div class="wrapper wpm">
+            <div class="curr_wpm">
+                <h2>100</h2>
+            </div>
+            <div class="title_text">
+                <h3>الفاظ فی منٹ</h3>
+            </div>
+        </div>
+        <div class="wrapper cpm">
+            <div class="curr_cpm">
+                <h2>100</h2>
+            </div>
+            <div class="title_text">
+                <h3>حروف فی منٹ</h3>
+            </div>
+        </div>
+        <div class="wrapper errors">
+            <div class="curr_errors">
+                <h2>0</h2>
+            </div>
+            <div class="title_text">
+                <h3>غلطیاں</h3>
+            </div>
+        </div>
+        <div class="wrapper accuracy">
+            <div class="curr_accuracy">
+                <h2>100</h2>
+            </div>
+            <div class="title_text">
+                <h3>درستگی %</h3>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="test_para">
+            <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
+        </div>
+        <textarea class="input_area" oninput="processCurrentText()" onfocus="startGame()"></textarea>
+        <button class="restart_btn" onclick="resetValues()">Restart</button>
     </main>
 
     <footer>
-        <div class="copyright-info">تمام حقوق بحق ناشر محفوظ ہیں &copy;</div>
+        <p class="copyright-info"> <span>&copy;</span> تمام حقوق بحق ناشر محفوظ ہیں</p>
     </footer>
 
 </body>

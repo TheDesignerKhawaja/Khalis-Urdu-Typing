@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    direction: rtl;
 }
 
 :root {
@@ -14,17 +15,141 @@
     --pDark: #0100ca;
 }
 
-h1 {
-    font-size: 4.5rem;
+body {
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template: repeat(3, auto) / 1fr 3fr;
 }
 
-h2,
+header,
+footer {
+    grid-column: 1 / -1;
+}
+
+main,
+aside {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3.5rem;
+    word-spacing: -0.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 p,
 textarea {
     font-size: 1.8rem;
     font-family: 'Noto Nastaliq Urdu', serif;
+    resize: none;
+}
+
+.tooltip {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: max-content;
+    padding: 0 12px 2px;
+    font-size: 1.5rem;
+    background-color: #a155ff91;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, .4));
+    opacity: 0;
+    transition: all .3s 200ms;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 10px solid #a155ff91;
+}
+
+.has-tooltip {
+    position: relative;
+}
+
+.has-tooltip:hover .tooltip {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+header {
+    padding: 20px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .4));
+}
+
+header nav a {
+    display: block;
+    padding: 5px;
+    font-size: 2rem;
+}
+
+aside {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+}
+
+aside .wrapper {
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 100%;
+    line-height: 3rem;
+    word-spacing: -0.3rem;
+}
+
+aside .wrapper:not(:last-child) {
+    border-bottom: 1px solid var(--pLight);
+}
+
+header,
+aside {
+    color: white;
+    background-color: var(--pColor);
+}
+
+footer {
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(40, 40, 40);
+}
+
+footer p {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+footer span {
+    margin-left: 8px;
+    font-size: 1.9rem;
 }
