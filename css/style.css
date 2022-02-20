@@ -1,3 +1,5 @@
+/* UNIVERSAL */
+
 *,
 *::before,
 *::after {
@@ -17,7 +19,7 @@
 
 body {
     width: 100%;
-    float: left;
+    float: right;
     display: grid;
     grid-template: repeat(3, auto) / 1fr 3fr;
 }
@@ -30,6 +32,12 @@ footer {
 main,
 aside {
     height: 100vh;
+}
+
+header,
+aside {
+    color: white;
+    background-color: var(--pColor);
 }
 
 h1 {
@@ -52,10 +60,16 @@ a {
 
 p,
 textarea {
+    width: 100%;
+    float: right;
     font-size: 1.8rem;
     font-family: 'Noto Nastaliq Urdu', serif;
     resize: none;
+    overflow: auto;
 }
+
+
+/* TOOLTIP */
 
 .tooltip {
     position: absolute;
@@ -92,6 +106,9 @@ textarea {
     transform: translate(-50%, 0);
 }
 
+
+/* HEADER */
+
 header {
     padding: 20px 50px;
     display: flex;
@@ -106,6 +123,9 @@ header nav a {
     padding: 5px;
     font-size: 2rem;
 }
+
+
+/* ASIDE */
 
 aside {
     padding: 20px 40px;
@@ -128,11 +148,40 @@ aside .wrapper:not(:last-child) {
     border-bottom: 1px solid var(--pLight);
 }
 
-header,
-aside {
-    color: white;
-    background-color: var(--pColor);
+
+/* MAIN */
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
 }
+
+main .test_para {
+    height: 50%;
+    padding-top: 30px;
+}
+
+main p {
+    width: 100%;
+    height: 100%;
+}
+
+main textarea {
+    height: 50%;
+    margin: 20px auto;
+    padding: 20px 10px 10px;
+    border: none;
+    border-top: 1px solid grey;
+    outline: none;
+}
+
+
+/* FOOTER */
 
 footer {
     padding: 5px 10px;

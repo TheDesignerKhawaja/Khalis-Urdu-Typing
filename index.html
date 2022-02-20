@@ -65,14 +65,16 @@
                 <h3>درستگی %</h3>
             </div>
         </div>
+        <div class="wrapper restart">
+            <button class="restart_btn" onclick="resetValues()">Restart</button>
+        </div>
     </aside>
 
     <main>
         <div class="test_para">
             <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
         </div>
-        <textarea class="input_area" oninput="processCurrentText()" onfocus="startGame()"></textarea>
-        <button class="restart_btn" onclick="resetValues()">Restart</button>
+        <textarea class="input_area" oninput="processCurrentText()" onkeypress="startGame()" placeholder="یہاں لکھیں..."></textarea>
     </main>
 
     <footer>
