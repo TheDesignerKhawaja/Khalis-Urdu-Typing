@@ -21,7 +21,7 @@ body {
     width: 100%;
     float: right;
     display: grid;
-    grid-template: repeat(3, auto) / 1fr 3fr;
+    grid-template: repeat(3, auto) / 3fr 1fr;
 }
 
 header,
@@ -148,6 +148,17 @@ aside .wrapper:not(:last-child) {
     border-bottom: 1px solid var(--pLight);
 }
 
+#selectTime {
+    margin: 20px auto;
+    padding: 6px 20px;
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
 aside .restart {
     margin-top: 30px;
 }
@@ -167,6 +178,14 @@ aside .restart_btn {
 
 aside .restart_btn:hover {
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, .3));
+}
+
+.cpm,
+.wpm,
+.accuracy,
+.errors,
+.restart {
+    display: none;
 }
 
 
@@ -199,6 +218,21 @@ main textarea {
     border: none;
     border-top: 1px solid grey;
     outline: none;
+}
+
+
+/* INCORRECT */
+
+.incorrect_char {
+    color: red;
+    text-decoration: underline;
+}
+
+
+/* CORRECT */
+
+.correct_char {
+    color: darkgreen;
 }
 
 

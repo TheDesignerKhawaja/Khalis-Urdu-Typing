@@ -24,63 +24,70 @@
         </nav>
     </header>
 
+
+    <main>
+        <div class="test_para">
+            <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
+        </div>
+        <textarea class="input_area" oninput="processCurrentText()" onfocus="startGame()" placeholder="یہاں لکھیں..."></textarea>
+    </main>
+
     <aside>
         <div class="wrapper timer">
-            <div class="curr_time">
-                <h2>60s</h2>
+            <div>
+                <select name="timer" id="selectTime">
+                    <option value="5" selected onclick="setTime()">1 منٹ</option>
+                    <option value="120" onclick="setTime()">2 منٹ</option>
+                    <option value="300" onclick="setTime()">5 منٹ</option>
+                </select>
+                <h2 class="curr_time">60s</h2>
             </div>
             <div class="title_text">
                 <h3>وقت</h3>
             </div>
         </div>
         <div class="wrapper wpm">
-            <div class="curr_wpm">
-                <h2>100</h2>
+            <div>
+                <h2 class="curr_wpm">100</h2>
             </div>
             <div class="title_text">
                 <h3>الفاظ فی منٹ</h3>
             </div>
         </div>
         <div class="wrapper cpm">
-            <div class="curr_cpm">
-                <h2>100</h2>
+            <div>
+                <h2 class="curr_cpm">100</h2>
             </div>
             <div class="title_text">
                 <h3>حروف فی منٹ</h3>
             </div>
         </div>
         <div class="wrapper errors">
-            <div class="curr_errors">
-                <h2>0</h2>
+            <div>
+                <h2 class="curr_errors">0</h2>
             </div>
             <div class="title_text">
                 <h3>غلطیاں</h3>
             </div>
         </div>
         <div class="wrapper accuracy">
-            <div class="curr_accuracy">
-                <h2>100</h2>
+            <div>
+                <h2 class="curr_accuracy">100</h2>
             </div>
             <div class="title_text">
                 <h3>درستگی %</h3>
             </div>
         </div>
         <div class="wrapper restart">
-            <button class="restart_btn" onclick="resetValues()">دوبارہ کریں</button>
+            <button class="restart_btn" onclick="restartPage()">دوبارہ کریں</button>
         </div>
     </aside>
-
-    <main>
-        <div class="test_para">
-            <p class="quote">مندرجہ ذیل ڈبہ میں کلک کریں اور ٹائپنگ شروع کریں</p>
-        </div>
-        <textarea class="input_area" oninput="processCurrentText()" onkeypress="startGame()" placeholder="یہاں لکھیں..."></textarea>
-    </main>
 
     <footer>
         <p class="copyright-info"> <span>&copy;</span> تمام حقوق بحق ناشر محفوظ ہیں</p>
     </footer>
 
+    <script src="script/script.js"></script>
 </body>
 
 </html>
