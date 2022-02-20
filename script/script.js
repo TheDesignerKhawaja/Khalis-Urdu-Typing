@@ -1,5 +1,9 @@
 // define the time limit
-let TIME_LIMIT = document.getElementById("selectTime").value;
+let TIME_LIMIT = 60;
+
+function setTime() {
+    TIME_LIMIT = document.getElementById("selectTime").value;
+}
 
 // define quotes to be used
 let quotes_array = [
