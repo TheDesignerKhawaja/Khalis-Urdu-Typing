@@ -118,6 +118,13 @@ header {
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .4));
 }
 
+header nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header nav a {
     display: block;
     padding: 5px;
