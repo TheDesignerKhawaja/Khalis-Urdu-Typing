@@ -234,6 +234,7 @@ main textarea {
 
 .correct_char {
     color: darkgreen;
+    opacity: .3;
 }
 
 
