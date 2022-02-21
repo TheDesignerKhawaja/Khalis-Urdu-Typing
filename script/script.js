@@ -19,7 +19,7 @@ let accuracy_text = document.querySelector(".curr_accuracy");
 let error_text = document.querySelector(".curr_errors");
 let cpm_text = document.querySelector(".curr_cpm");
 let wpm_text = document.querySelector(".curr_wpm");
-let quote_text = document.querySelector(".quote");
+let quote_text = document.querySelector(".test_text");
 let input_area = document.querySelector(".input_area");
 let restart_btn = document.querySelector(".restart");
 let cpm_group = document.querySelector(".cpm");
@@ -37,6 +37,8 @@ let characterTyped = 0;
 let current_quote = "";
 let quoteNo = 0;
 let timer = null;
+
+quote_text.innerText = quotes_array[quoteNo];
 
 function updateQuote() {
     quote_text.textContent = null;
