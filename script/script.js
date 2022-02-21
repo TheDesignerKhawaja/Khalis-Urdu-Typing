@@ -1,3 +1,17 @@
+// Show Share Options
+function showShare() {
+    let shareOps = document.getElementById("shareOps");
+    shareOps.classList.toggle("open-share");
+}
+
+// COPY TO CLIPBOARD
+function copyURL() {
+    var url = document.getElementById("shareURL");
+    url.select();
+    url.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(url.value);
+}
+
 // define the time limit
 let TIME_LIMIT = 60;
 

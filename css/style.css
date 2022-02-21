@@ -78,6 +78,7 @@ textarea {
     transform: translate(-50%, 50%);
     width: max-content;
     padding: 0 12px 2px;
+    visibility: hidden;
     font-size: 1.5rem;
     background-color: #a155ff91;
     border-radius: 3px;
@@ -102,6 +103,7 @@ textarea {
 }
 
 .has-tooltip:hover .tooltip {
+    visibility: visible;
     opacity: 1;
     transform: translate(-50%, 0);
 }
@@ -118,7 +120,11 @@ header {
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .4));
 }
 
+
+/* NAV */
+
 header nav {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -133,6 +139,63 @@ header nav a {
 
 header nav a:first-child {
     margin-left: 30px;
+}
+
+
+/* SHARE OPTIONS */
+
+header nav .share-options {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transform-origin: top;
+    width: 180px;
+    padding: 10px;
+    visibility: hidden;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
+    z-index: 100;
+    opacity: 0;
+}
+
+
+/* TOGGLE CLASS */
+
+header nav .open-share {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+
+/* SINGLE SHARE OPTION */
+
+header nav .share-options .share {
+    width: max-content;
+    padding: 5px 9px;
+    color: white;
+    background-color: var(--pLight);
+    border: 1px solid var(--pLight);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+header nav .share-options .share:hover {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, .3));
+}
+
+header nav .share-options input {
+    width: 122px;
+    padding: 5px;
+    border: 1px solid var(--pLight);
+    border-radius: 3px;
+    outline: none;
 }
 
 

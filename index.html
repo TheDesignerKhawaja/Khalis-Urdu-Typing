@@ -31,10 +31,14 @@
             </h1>
         </div>
         <nav>
-            <a href="javascript:void(0)" class="has-tooltip">
+            <a href="javascript:void(0)" onclick="showShare()" class="has-tooltip">
                 <i class="fas fa-share" aria-describedby="tool-tip"></i>
                 <span class="tooltip" id="too-tip">دوستوں کو بھیجیں</span>
             </a>
+            <div class="share-options" id="shareOps">
+                <button class="share" type="button" onclick="copyURL()"><i class="fas fa-link"></i></button>
+                <input type="url" value="https://khalisurdutyping.netlify.app" id="shareURL" readonly>
+            </div>
             <a href="https://www.instagram.com/thedesignerkhawaja" target="_blank" rel="noopener noreferrer" class="has-tooltip"><i class="fas fa-paper-plane" aria-describedby="tool-tip"></i> <span class="tooltip" id="tool-tip">رابطہ کریں</span></a>
         </nav>
     </header>
