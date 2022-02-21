@@ -3,6 +3,7 @@ let TIME_LIMIT = 60;
 
 function setTime() {
     TIME_LIMIT = document.getElementById("selectTime").value;
+    document.querySelector(".curr_time").innerText = TIME_LIMIT + "s";
 }
 
 // define quotes to be used
