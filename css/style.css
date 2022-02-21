@@ -131,6 +131,10 @@ header nav a {
     font-size: 2rem;
 }
 
+header nav a:first-child {
+    margin-left: 30px;
+}
+
 
 /* ASIDE */
 
