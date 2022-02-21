@@ -31,7 +31,7 @@ footer {
 
 main,
 aside {
-    height: 120vh;
+    height: 100vh;
 }
 
 header,
@@ -158,6 +158,10 @@ aside .wrapper:not(:last-child) {
     border: 1px solid white;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#selectTime option {
+    color: black;
 }
 
 aside .restart {
