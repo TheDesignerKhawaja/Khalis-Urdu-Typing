@@ -382,6 +382,9 @@ footer span {
     header {
         padding: 10px 25px;
     }
+    header nav .share-options {
+        left: 90%;
+    }
     main,
     aside {
         display: none;
